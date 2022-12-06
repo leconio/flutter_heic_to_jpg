@@ -14,6 +14,7 @@ fun convertHeicToJpeg(heic: String, outputFile: String) : String? {
         bitmap.compress(Bitmap.CompressFormat.JPEG, 100, FileOutputStream(file));
         return file.path
     }catch (e:Exception){
+        e.printStackTrace()
     }
     return null
 }
